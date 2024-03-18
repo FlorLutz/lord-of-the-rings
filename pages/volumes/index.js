@@ -4,22 +4,15 @@ import { introduction, volumes } from "@/lib/data";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-export default function index() {
+export default function Index() {
+  const router = useRouter();
+
   function getRandomElement(array) {
     return array[Math.floor(Math.random() * array.length)];
   }
 
-  if (!volumes) {
-    return;
-  }
-  const randomSlug = getRandomElement(volumes).slug;
-
-  console.log("random", getRandomElement(volumes));
-
-  const router = useRouter();
-
-  function handleRandomClick(e) {
-    e.preventDefault();
+  function handleRandomClick() {
+    const randomSlug = getRandomElement(volumes).slug;
     router.push(`/volumes/${randomSlug}`);
   }
 
@@ -40,10 +33,6 @@ export default function index() {
         ))}
       </ul>
       <button onClick={handleRandomClick}>Random Volume</button>
-
-      {/* // not needed: <Link href={`/volumes/${randomSlug}`}>
-        <button>Random Volume</button>
-      </Link> */}
     </>
   );
 }
