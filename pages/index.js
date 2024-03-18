@@ -5,7 +5,6 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        {" "}
         <title>The Lord of the Rings</title>
       </Head>
       <h1>Lord of the Rings - Website</h1>

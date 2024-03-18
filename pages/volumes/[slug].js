@@ -9,12 +9,6 @@ export default function VolumePage() {
   const { slug } = router.query;
   const volume = volumes.find((element) => element.slug === slug);
   if (!volume) return;
-  console.log("slug", slug);
-  console.log("volume", volume);
-  console.log(
-    "index",
-    volumes.findIndex((element) => element.slug === slug)
-  );
 
   return (
     <>
