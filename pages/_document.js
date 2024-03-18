@@ -27,7 +27,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <title>The Lord of the Rings</title>
           <link rel="icon" type="image/x-icon" href="/favicon.ico"></link>
         </Head>
         <body>
